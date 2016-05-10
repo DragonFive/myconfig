@@ -1,5 +1,7 @@
 """"""""""""""" 基础配置 """""""""""""""""""
-set number "设置行号
+"设置行号
+"set number
+"set nu nornu
 " 设置相对行号 挺好玩的
 set relativenumber
 " 将自动缩进改为4个空格
@@ -93,8 +95,10 @@ nnoremap <C-K> <C-W>k
 nnoremap <C-H> <C-W>h
 nnoremap <C-L> <C-W>l
 " buffer 的快速切换
-nnoremap <C-M> :bn<CR>
-nnoremap <C-N> :bp<CR>
+nnoremap <silent> [b :bprevious<CR>
+nnoremap <silent> ]b :bnext<CR>
+nnoremap <silent> [B :bfirst<CR>
+nnoremap <silent> ]B :blast<CR>
 " 代码折叠快捷键
 nnoremap <space> za
 " 快速保存
@@ -106,7 +110,7 @@ iabbrev xmlv <?xml version="1.0" encoding="utf-8" ?>
 
 " 事件监听
 " 自动保存功能
-autocmd InsertLeave *.py :w
+"autocmd InsertLeave *.py *.md :w
 " 自动启动文件浏览目录
 autocmd VimEnter * :NERDTreeTabsOpen
 " 为python文件自动添加文件头
@@ -258,6 +262,8 @@ let g:nerdtree_tabs_open_on_console_startup=1
 "let g:nerdtree_tabs_smart_startup_focus=2
 " 忽略一下文件的显示
 let NERDTreeIgnore=['\.pyc','\~$','\.swp']
+" 显示书签列表
+let NERDTreeShowBookmarks=1
 
 " 代码概况配置
 " 需要安装ctags

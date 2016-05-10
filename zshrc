@@ -82,8 +82,5 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 alias zshconfig="vim ~/.zshrc"
 alias h="history"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias ohmyzsh="vim ~/.oh-my-zsh"
 
-alias gcommit="git commit -am "
-alias gpush="git push origin master"
-alias gpull="git pull origin master"
