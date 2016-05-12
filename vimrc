@@ -68,7 +68,7 @@ inoremap } <c-r>=ClosePair('}')<CR>
 " 快速打开控制台
 nnoremap <leader>sh :VimShellTab<CR>
 " 按键绑定，将调用函数并执行
-"nnoremap <leader>f :call Mydict()<CR>
+nnoremap <leader>f :call Mydict()<CR>
 " 快速编辑vimrc文件
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 " 加载vimrc文件
@@ -298,9 +298,17 @@ let g:SimpylFold_docstring_preview=1
 " 自动补全配置
 let g:ycm_autoclose_preview_window_after_completion=1
 map <leader>g :YcmCompleter GoToDefintionElseDeclaration<CR>
+set completeopt-=preview
 
 " python语法检查配置
 let g:pyflakes_use_quickfix=0
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
 
 " 对齐线设置
 let g:indent_guides_guide_size=1
