@@ -130,9 +130,12 @@ autocmd BufReadPost *
             \   exe "normal g'\"" |
             \ endif
 
+" Python 快速插入断点
+nnoremap <F2> oimport pdb; pdb.set_trace()<ESC>
+
 colorscheme desert
 syntax enable
-" 状态栏配置
+" airline 状态栏配置
 " 显示buffer标签
 let g:airline#extensions#tabline#enabled=1
 let g:airline_theme='tomorrow'
@@ -221,24 +224,17 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'majutsushi/tagbar'
 " 单词搜索
 Plugin 'mileszs/ack.vim'
-" python 语法检查
-" Plugin 'kevinw/pyflakes-vim'
 " 对齐线
 Plugin 'nathanaelkane/vim-indent-guides'
 " 快速注释
 Plugin 'scrooloose/nerdcommenter'
 " 日历插件
 Plugin 'itchyny/calendar.vim'
-" 导入插件
-"Plugin 'python-rope/ropevim'
 " 在vim中使用shell
 Plugin 'Shougo/vimshell.vim'
 Plugin 'Shougo/vimproc.vim'
-" buffer 管理插件
-Plugin 'fholgado/minibufexpl.vim'
-
-Plugin 'reedes/vim-one'
-
+" Python Debug 工具
+Plugin 'gotcha/vimpdb'
 " Python pep8检查
 Plugin 'vim-scripts/pep8'
 
