@@ -1,7 +1,6 @@
 """"""""""""""" 基础配置 """""""""""""""""""
 "设置行号
-"set number
-"set nu nornu
+set number
 " 设置相对行号 挺好玩的
 set relativenumber
 " 将自动缩进改为4个空格
@@ -192,6 +191,7 @@ Plugin 'jistr/vim-nerdtree-tabs'
 " 在nerdtree中显示git信息
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 " 语法检查
+Plugin 'tpope/vim-pathogen'
 Plugin 'scrooloose/syntastic'
 " 滚屏插件，使滚屏看起来好看一下
 Plugin 'yonchu/accelerated-smooth-scroll'
@@ -238,6 +238,9 @@ Plugin 'Shougo/vimproc.vim'
 Plugin 'fholgado/minibufexpl.vim'
 
 Plugin 'reedes/vim-one'
+
+" Python pep8检查
+Plugin 'vim-scripts/pep8'
 
 call vundle#end()
 
@@ -301,14 +304,11 @@ map <leader>g :YcmCompleter GoToDefintionElseDeclaration<CR>
 set completeopt-=preview
 
 " python语法检查配置
-let g:pyflakes_use_quickfix=0
-"set statusline+=%#warningmsg#
-"set statusline+=%{SyntasticStatuslineFlag()}
-"set statusline+=%*
-"let g:syntastic_always_populate_loc_list = 1
-"let g:syntastic_auto_loc_list = 1
-"let g:syntastic_check_on_open = 1
-"let g:syntastic_check_on_wq = 0
+execute pathogen#infect()
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 " 对齐线设置
 let g:indent_guides_guide_size=1
