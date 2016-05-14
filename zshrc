@@ -83,4 +83,4 @@ source $ZSH/oh-my-zsh.sh
 alias zshconfig="vim ~/.zshrc"
 alias h="history"
 alias ohmyzsh="vim ~/.oh-my-zsh"
-
+alias a="sudo dpkg-reconfigure keyboard-configuration"
