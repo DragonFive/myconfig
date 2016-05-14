@@ -178,7 +178,6 @@ set nocompatible
 filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
-"set rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim
 
 call vundle#begin()
 
@@ -237,10 +236,14 @@ Plugin 'Shougo/vimproc.vim'
 Plugin 'gotcha/vimpdb'
 " Python pep8检查
 Plugin 'vim-scripts/pep8'
+" 配对插件
+Plugin 'tpope/vim-surround'
 
 call vundle#end()
 
 filetype plugin indent on
+
+runtime macros/matchit.vim
 
 "插件配置
 """""""""""""""""""""""""""""""""""""""""""""""""""
