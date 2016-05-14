@@ -49,7 +49,7 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git mvn autojump last-working-dir svn zshmarks)
+plugins=(git mvn autojump last-working-dir svn zshmarks vundle pip)
 
 # User configuration
 

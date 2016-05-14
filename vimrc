@@ -131,7 +131,7 @@ autocmd BufReadPost *
             \ endif
 
 " Python 快速插入断点
-nnoremap <F2> oimport pdb; pdb.set_trace()<ESC>
+nnoremap <F2> oimport ipdb; ipdb.set_trace()<ESC>:w<CR>
 
 colorscheme desert
 syntax enable
