@@ -238,6 +238,8 @@ Plugin 'gotcha/vimpdb'
 Plugin 'vim-scripts/pep8'
 " 配对插件
 Plugin 'tpope/vim-surround'
+" git 信息
+Plugin 'airblade/vim-gitgutter'
 
 call vundle#end()
 
@@ -266,6 +268,18 @@ let g:nerdtree_tabs_open_on_console_startup=1
 let NERDTreeIgnore=['\.pyc','\~$','\.swp']
 " 显示书签列表
 let NERDTreeShowBookmarks=1
+" git信息显示配置
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "✹",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ "Unknown"   : "?"
+    \ }
 
 " 代码概况配置
 " 需要安装ctags
