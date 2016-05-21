@@ -177,71 +177,69 @@ endfunction
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim
-
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
 " 插件管理
-Plugin 'VundleVim/Vundle.vim'
+Plug 'VundleVim/Vundle.vim'
 " 文件管理
-Plugin 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree'
 " python 插件
-"Plugin 'python.vim'
+"Plug 'python.vim'
 " 标签共享nerdtree
-Plugin 'jistr/vim-nerdtree-tabs'
-" Plugin 'Xuyuanp/git-nerdtree'
+Plug 'jistr/vim-nerdtree-tabs'
+" Plug 'Xuyuanp/git-nerdtree'
 " 在nerdtree中显示git信息
-Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 " 语法检查
-Plugin 'tpope/vim-pathogen'
-Plugin 'scrooloose/syntastic'
+Plug 'tpope/vim-pathogen'
+Plug 'scrooloose/syntastic'
 " 滚屏插件，使滚屏看起来好看一下
-Plugin 'yonchu/accelerated-smooth-scroll'
+Plug 'yonchu/accelerated-smooth-scroll'
 " 标签编写插件
-Plugin 'mattn/emmet-vim'
+Plug 'mattn/emmet-vim'
 " 代码折叠
-Plugin 'tmhedberg/SimpylFold'
+Plug 'tmhedberg/SimpylFold'
 " 缩进插件
-Plugin 'indentpython.vim'
+Plug 'indentpython.vim'
 " 自动补全插件
-Plugin 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe'
 " 语法高亮插件
-Plugin 'nvie/vim-flake8'
+Plug 'nvie/vim-flake8'
 " 主题插件
-Plugin 'jnurmine/Zenburn'
-Plugin 'altercation/vim-colors-solarized'
+Plug 'jnurmine/Zenburn'
+Plug 'altercation/vim-colors-solarized'
 " 文件搜索插件
-Plugin 'ctrlpvim/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 " git支持
-Plugin 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'
 " 状态栏插件
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 " Python 模块
-"Plugin 'klen/python-mode'
+"Plug 'klen/python-mode'
 " outline插件
-Plugin 'majutsushi/tagbar'
+Plug 'majutsushi/tagbar'
 " 单词搜索
-Plugin 'mileszs/ack.vim'
+Plug 'mileszs/ack.vim'
 " 对齐线
-Plugin 'nathanaelkane/vim-indent-guides'
+Plug 'nathanaelkane/vim-indent-guides'
 " 快速注释
-Plugin 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdcommenter'
 " 日历插件
-Plugin 'itchyny/calendar.vim'
+Plug 'itchyny/calendar.vim'
 " 在vim中使用shell
-Plugin 'Shougo/vimshell.vim'
-Plugin 'Shougo/vimproc.vim'
+Plug 'Shougo/vimshell.vim'
+Plug 'Shougo/vimproc.vim'
 " Python Debug 工具
-Plugin 'gotcha/vimpdb'
+Plug 'gotcha/vimpdb'
 " Python pep8检查
-Plugin 'vim-scripts/pep8'
+Plug 'vim-scripts/pep8'
 " 配对插件
-Plugin 'tpope/vim-surround'
+Plug 'tpope/vim-surround'
 " git 信息
-Plugin 'airblade/vim-gitgutter'
+Plug 'airblade/vim-gitgutter'
 
-call vundle#end()
+call plug#end()
 
 filetype plugin indent on
 
