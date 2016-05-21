@@ -343,13 +343,14 @@ let ropevim_vim_completion=1
 let ropevim_enable_autoimport=1
 let ropevim_extended_complete=1
 
-" MiniBufExpl Colors
-hi MBENormal               guifg=#808080 guibg=fg
-hi MBEChanged              guifg=#CD5907 guibg=fg
-hi MBEVisibleNormal        guifg=#5DC2D6 guibg=fg
-hi MBEVisibleChanged       guifg=#F1266F guibg=fg
-hi MBEVisibleActiveNormal  guifg=#A6DB29 guibg=fg
-hi MBEVisibleActiveChanged guifg=#F1266F guibg=fg
+" ctrlP 配置
+" 忽略文件
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+let g:ctrlp_custom_ignore = '\v[\/]\.(git)$'
+let g:ctrlp_custom_ignore = {
+	\ 'dir':  '\v[\/]\.(git)$',
+	\ 'file': '\v\.(swp|pyc)$',
+	\ }
 
 " VimShell 配置
 let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
