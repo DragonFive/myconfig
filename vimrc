@@ -94,10 +94,10 @@ nnoremap <C-K> <C-W>k
 nnoremap <C-H> <C-W>h
 nnoremap <C-L> <C-W>l
 " buffer 的快速切换
-nnoremap <silent> hb :bprevious<CR>
-nnoremap <silent> lb :bnext<CR>
-nnoremap <silent> hB :bfirst<CR>
-nnoremap <silent> lB :blast<CR>
+nnoremap <silent> [b :bprevious<CR>
+nnoremap <silent> ]b :bnext<CR>
+nnoremap <silent> [B :bfirst<CR>
+nnoremap <silent> ]B :blast<CR>
 " 代码折叠快捷键
 nnoremap <space> za
 " 快速保存
@@ -345,7 +345,7 @@ let ropevim_extended_complete=1
 
 " ctrlP 配置
 " 忽略文件
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc
 let g:ctrlp_custom_ignore = '\v[\/]\.(git)$'
 let g:ctrlp_custom_ignore = {
 	\ 'dir':  '\v[\/]\.(git)$',
