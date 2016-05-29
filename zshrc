@@ -84,3 +84,7 @@ alias zshconfig="vim ~/.zshrc"
 alias h="history"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias a="sudo dpkg-reconfigure keyboard-configuration"
+alias e=vim
+
+# 配置默认编辑器
+export EDITOR=/usr/bin/vim

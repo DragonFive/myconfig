@@ -3,18 +3,22 @@
 set number
 " 设置相对行号 挺好玩的
 set relativenumber
-" 将自动缩进改为4个空格
 " 设置智能缩进
 set smartindent
 " 设置自动缩进的长度
 set shiftwidth=4
+" 设置<Tab>键占用的列数
 set tabstop=4
 " 使用空格代替tab
 set expandtab            
-" 保存光标距离屏幕顶部和底部有3行的距离
+" 编写代码时，换行自动缩进
+set autoindent
+" 保持光标距离屏幕顶部和底部有3行的距离
 set scrolloff=3
 " 将被搜索的字符串进行高亮设置
 set hlsearch
+" 设置查找自动提示
+set incsearch
 " 在当前窗口中，如果单行长度过长
 " 则能显示多少就显示多少
 " 不用将整行全部显示出来
@@ -28,8 +32,6 @@ set cursorline
 set laststatus=2
 " 打开文件默认不折叠代码
 set foldlevelstart=99
-" 编写代码时，换行自动缩进
-set autoindent
 " 自动匹配括号
 set showmatch
 " 代码可折叠
@@ -42,6 +44,8 @@ set clipboard=unnamed
 " 解决退格键失效的问题
 set backspace=indent,eol,start
 set modifiable
+" 在显示帮助信息列表的时候，显示状态栏
+set wildmenu
 
 " 所有python语法高亮功能生效
 let python_highlight_all=1
@@ -64,6 +68,9 @@ inoremap [ []<ESC>i
 inoremap ] <c-r>=ClosePair(']')<CR>
 inoremap { {}<ESC>i
 inoremap } <c-r>=ClosePair('}')<CR>
+" 换行之后插入#保持只能缩进
+inoremap # X#
+
 " 快速打开控制台
 nnoremap <leader>sh :VimShellTab<CR>
 " 按键绑定，将调用函数并执行
@@ -103,8 +110,10 @@ nnoremap <space> za
 " 快速保存
 nnoremap <leader>w :w<CR>
 
+" 重新映射帮助命令
+"cnoremap he vert bo h
+
 " 缩写映射
-iabbrev xxzy xinxingzhao@yeah.net
 iabbrev xmlv <?xml version="1.0" encoding="utf-8" ?>
 
 " 事件监听
@@ -334,7 +343,7 @@ let g:calendar_view="week"
 " 设置view布局
 let g:calendar_views=['year','day','month','week','clock','day']
 " 配置快捷键
-nnoremap ca :Calendar<cr>
+"nnoremap ca :Calendar<cr>
 
 " 配置RopeVim
 let ropevim_codeassist_maxfixes=10
@@ -391,6 +400,7 @@ function! Mydict()
   setlocal buftype=nofile bufhidden=hide noswapfile
   "将expl的内容显示到查询结果窗口
   1s/^/\=expl/
+  :1
   "跳转回文本窗口
   "wincmd p
 endfunction
