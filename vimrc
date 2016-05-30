@@ -189,7 +189,7 @@ filetype off
 call plug#begin('~/.vim/plugged')
 
 " 插件管理
-Plug 'VundleVim/Vundle.vim'
+"Plug 'VundleVim/Vundle.vim'
 " 文件管理
 Plug 'scrooloose/nerdtree'
 " python 插件
