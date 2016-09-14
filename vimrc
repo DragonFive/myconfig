@@ -46,6 +46,8 @@ set backspace=indent,eol,start
 set modifiable
 " 在显示帮助信息列表的时候，显示状态栏
 set wildmenu
+" 设置里面命令保存条数
+set history=1000
 
 " 所有python语法高亮功能生效
 let python_highlight_all=1
@@ -124,14 +126,14 @@ autocmd VimEnter * :NERDTreeTabsOpen
 " 为python文件自动添加文件头
 autocmd BufNewFile *.py execute ":call NewPy()"
 function! NewPy()
-    "call setline(1,"#!/usr/bin/env python")
+    " call setline(1,"#!/usr/bin/env python")
     call setline(1,"# -*- encoding: utf-8 -*-")
-    call setline(2,"\"\"\" Copyright(c) 2010,Shanghai MJ Intelligent System Co.Ltd<http://www.shmingjiang.com>,All rights reserved.")
-    call setline(3,"Author       : Created by zhaoxinxing")
-    let date_time = strftime("%Y-%m-%d\ %H:%M:%S")
-    call setline(4,"Date         : ".date_time)
-    call setline(5,"Versions     : 1.0")
-    call setline(6,"\"\"\"")
+    " call setline(2,"\"\"\" Copyright(c) 2010,Shanghai MJ Intelligent System Co.Ltd<http://www.shmingjiang.com>,All rights reserved.")
+    " call setline(3,"Author       : Created by zhaoxinxing")
+    " let date_time = strftime("%Y-%m-%d\ %H:%M:%S")
+    " call setline(4,"Date         : ".date_time)
+    " call setline(5,"Versions     : 1.0")
+    " call setline(6,"\"\"\"")
 endfunction
 " 记录上次关闭vim光标所在的位置
 autocmd BufReadPost *

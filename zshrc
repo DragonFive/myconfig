@@ -88,3 +88,5 @@ alias e=vim
 
 # 配置默认编辑器
 export EDITOR=/usr/bin/vim
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
