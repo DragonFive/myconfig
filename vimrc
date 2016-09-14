@@ -52,6 +52,8 @@ set history=1000
 " 所有python语法高亮功能生效
 let python_highlight_all=1
 
+set term=screen
+
 """"""""""""""""""""" 映射方案 """"""""""""""""""""
 " 快速插入时间
 map <F8> <c-r>=strftime("%Y-%m-%d %X")<cr>
