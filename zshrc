@@ -88,6 +88,9 @@ alias e=vim
 
 # 配置默认编辑器
 export EDITOR=/usr/bin/vim
-# export TERM="linux"
+
+export HISTTIMEFORMAT='%F %T '
+export HISTCONTROL=erasedups
+export HISTIGNORE="pwd:ls:ls –ltr:vim:cd:"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
