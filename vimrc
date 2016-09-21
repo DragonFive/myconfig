@@ -185,6 +185,7 @@ function! Header()
     r ~/mail/mutt/signature.html
 endfunction
 
+" 终端下设置alt快捷键可用
 let c='a'
 while c <= 'z'
   exec "set <A-".c.">=\e".c
