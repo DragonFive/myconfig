@@ -89,8 +89,15 @@ alias e=vim
 # 配置默认编辑器
 export EDITOR=/usr/bin/vim
 
-export HISTTIMEFORMAT='%F %T '
 export HISTCONTROL=erasedups
 export HISTIGNORE="pwd:ls:ls –ltr:vim:cd:"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+eval `dircolors ~/.dircolors`
+
+setopt EXTENDED_HISTORY
+
+setopt AUTO_PUSHD
+
+setopt PUSHD_IGNORE_DUPS

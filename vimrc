@@ -84,9 +84,9 @@ nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 " 加载vimrc文件
 nnoremap <leader>sv :source $MYVIMRC<cr>
 " 将当前行移动到下一行
-nnoremap - ddp
+" nnoremap - ddp
 " 将当前行移动到上一行
-nnoremap _ dd2kp
+" nnoremap _ dd2kp
 " 在命令模式下将小写转化为大写
 nnoremap <leader>u gUiwe
 " 将光标所在单词加上双引号
@@ -98,7 +98,7 @@ nnoremap H <S-^>
 " 将L映射为到行尾
 nnoremap L $
 " 映射选中当前光标所在单词
-nnoremap m #N
+nnoremap M #N
 " 在窗口之间快速移动
 nnoremap <C-J> <C-W>j
 nnoremap <C-K> <C-W>k
@@ -185,6 +185,14 @@ function! Header()
     r ~/mail/mutt/signature.html
 endfunction
 
+let c='a'
+while c <= 'z'
+  exec "set <A-".c.">=\e".c
+  exec "imap \e".c." <A-".c.">"
+  let c = nr2char(1+char2nr(c))
+endw
+
+set timeout ttimeoutlen=50
 "插件管理
 """""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible
@@ -251,6 +259,8 @@ Plug 'vim-scripts/pep8'
 Plug 'tpope/vim-surround'
 " git 信息
 Plug 'airblade/vim-gitgutter'
+" 整行移动
+Plug 'matze/vim-move'
 
 call plug#end()
 
