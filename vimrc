@@ -267,8 +267,8 @@ Plug 'tpope/vim-surround'
 Plug 'airblade/vim-gitgutter'
 " 整行移动
 Plug 'matze/vim-move'
-" 在终端里面使用GVim的主题
-" Plug 'godlygeek/csapprox'
+" Tmux 使用airline配置
+Plug 'edkolev/tmuxline.vim'
 
 call plug#end()
 
@@ -382,6 +382,15 @@ let g:ctrlp_custom_ignore = {
 	\ 'dir':  '\v[\/]\.(git)$',
 	\ 'file': '\v\.(swp|pyc)$',
 	\ }
+
+let g:tmuxline_preset = {
+      \'a'    : '#S',
+      \'c'    : ['#(whoami)', '#(uptime | cud -d " " -f 1,2,3)'],
+      \'win'  : ['#I', '#W'],
+      \'cwin' : ['#I', '#W', '#F'],
+      \'x'    : '#(date)',
+      \'y'    : ['%R', '%a', '%Y'],
+      \'z'    : '#H'}
 
 " VimShell 配置
 let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
