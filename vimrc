@@ -389,7 +389,7 @@ let g:tmuxline_preset = {
       \'win'  : ['#I', '#W'],
       \'cwin' : ['#I', '#W', '#F'],
       \'x'    : '#(date)',
-      \'y'    : ['%R', '%a', '%Y'],
+      \'y'    : ['%R', '%a', '%Y-%m-%d'],
       \'z'    : '#H'}
 
 " VimShell 配置
