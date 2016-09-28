@@ -150,8 +150,9 @@ colorscheme desert
 syntax enable
 " airline 状态栏配置
 " 显示buffer标签
+let &t_Co=256
 let g:airline#extensions#tabline#enabled=1
-let g:airline_theme='tomorrow'
+let g:airline_theme='solarized'
 let g:airline_powerline_fonts=1
 
 " 高亮行列的配色方
