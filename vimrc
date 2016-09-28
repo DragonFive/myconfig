@@ -54,8 +54,6 @@ let python_highlight_all=1
 
 set term=screen
 
-" 设置背景色
-set bg=dark
 
 """"""""""""""""""""" 映射方案 """"""""""""""""""""
 " 快速插入时间
@@ -149,8 +147,11 @@ autocmd BufReadPost *
 " Python 快速插入断点
 nnoremap <F2> oimport ipdb; ipdb.set_trace()<ESC>:w<CR>
 
-colorscheme desert
 syntax enable
+let g:solarized_termtrans = 1
+" 设置背景色
+set background=dark
+colorscheme solarized
 " airline 状态栏配置
 " 显示buffer标签
 let &t_Co=256
@@ -159,8 +160,8 @@ let g:airline_theme='solarized'
 let g:airline_powerline_fonts=1
 
 " 高亮行列的配色方
-highlight CursorLine   cterm=NONE ctermbg=black ctermfg=green guibg=NONE guifg=NONE
-highlight CursorColumn cterm=NONE ctermbg=black ctermfg=green guibg=NONE guifg=NONE
+highlight CursorLine   cterm=NONE ctermbg=black ctermfg=white guibg=red guifg=white
+highlight CursorColumn cterm=NONE ctermbg=black ctermfg=white guibg=red guifg=white
 " 修改高亮的背景色
 highlight SyntasticErrorSign guifg=white guibg=black
 
@@ -266,6 +267,8 @@ Plug 'tpope/vim-surround'
 Plug 'airblade/vim-gitgutter'
 " 整行移动
 Plug 'matze/vim-move'
+" 在终端里面使用GVim的主题
+" Plug 'godlygeek/csapprox'
 
 call plug#end()
 
