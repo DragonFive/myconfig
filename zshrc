@@ -15,10 +15,10 @@ ZSH_THEME="agnoster"
 # HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+export UPDATE_ZSH_DAYS=13
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -30,7 +30,7 @@ ZSH_THEME="agnoster"
 ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -40,7 +40,7 @@ ENABLE_CORRECTION="true"
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# HIST_STAMPS="mm/dd/yyyy"
+HIST_STAMPS="yyyy-mm-dd"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -49,12 +49,12 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git mvn autojump last-working-dir svn zshmarks vundle pip)
+plugins=(git mvn autojump last-working-dir svn zshmarks vundle pip extract catimg zsh-syntax-highlighting)
 
 # User configuration
 
-# export PATH=$PATH:"/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
-# export MANPATH="/usr/local/man:$MANPATH"
+export PATH=$PATH:"/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -85,6 +85,12 @@ alias h="history"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias a="sudo dpkg-reconfigure keyboard-configuration"
 alias e=vim
+alias -s java='vim'
+alias -s xml='vim'
+alias -s gz='tar -xzvf'
+alias -s tgz='tar -xzvf'
+alias -s zip='unzip'
+alias -s bz2='tar -xzvf'
 
 # 配置默认编辑器
 export EDITOR=/usr/bin/vim
@@ -96,14 +102,4 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 eval `dircolors ~/.dircolors`
 
-setopt EXTENDED_HISTORY
-
-setopt AUTO_PUSHD
-
-setopt PUSHD_IGNORE_DUPS
-
-# vim 键盘模式
-bindkey -v
-bindkey -M viins ‘jj’ vi-cmd-mode
-bindkey ‘^R’ history-incremental-search-backward
-
+setopt HIST_IGNORE_DUPS

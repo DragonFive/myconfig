@@ -56,6 +56,8 @@ set term=screen
 
 " 显示执行的命令
 set showcmd
+" 设置自动保存
+set autowrite
 
 """"""""""""""""""""" 映射方案 """"""""""""""""""""
 " 快速插入时间
@@ -212,11 +214,8 @@ call plug#begin('~/.vim/plugged')
 "Plug 'VundleVim/Vundle.vim'
 " 文件管理
 Plug 'scrooloose/nerdtree'
-" python 插件
-"Plug 'python.vim'
 " 标签共享nerdtree
 Plug 'jistr/vim-nerdtree-tabs'
-" Plug 'Xuyuanp/git-nerdtree'
 " 在nerdtree中显示git信息
 Plug 'Xuyuanp/nerdtree-git-plugin'
 " 语法检查
@@ -271,6 +270,8 @@ Plug 'airblade/vim-gitgutter'
 Plug 'matze/vim-move'
 " Tmux 使用airline配置
 Plug 'edkolev/tmuxline.vim'
+" buffer 关闭管理
+Plug 'schickling/vim-bufonly'
 
 call plug#end()
 
@@ -296,7 +297,7 @@ let g:nerdtree_tabs_open_on_console_startup=1
 "let g:nerdtree_tabs_focus_on_files=1
 "let g:nerdtree_tabs_smart_startup_focus=2
 " 忽略一下文件的显示
-let NERDTreeIgnore=['\.pyc','\~$','\.swp']
+let NERDTreeIgnore=['\.pyc','\~$','\.swp','\.class']
 " 显示书签列表
 let NERDTreeShowBookmarks=1
 " git信息显示配置
