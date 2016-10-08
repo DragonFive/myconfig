@@ -101,3 +101,9 @@ setopt EXTENDED_HISTORY
 setopt AUTO_PUSHD
 
 setopt PUSHD_IGNORE_DUPS
+
+# vim 键盘模式
+bindkey -v
+bindkey -M viins ‘jj’ vi-cmd-mode
+bindkey ‘^R’ history-incremental-search-backward
+

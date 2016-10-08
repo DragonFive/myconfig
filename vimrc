@@ -54,6 +54,8 @@ let python_highlight_all=1
 
 set term=screen
 
+" 显示执行的命令
+set showcmd
 
 """"""""""""""""""""" 映射方案 """"""""""""""""""""
 " 快速插入时间
