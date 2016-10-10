@@ -60,14 +60,8 @@ set showcmd
 set autowrite
 
 """"""""""""""""""""" 映射方案 """"""""""""""""""""
-" 快速插入时间
-map <F8> <c-r>=strftime("%Y-%m-%d %X")<cr>
-" 共享NERDTree 
-" map <leader>n <plug>NERDTreeTabsOpen<CR>
 " 使用jk退出插入模式
 inoremap jk <esc>
-" 取消<esc>退出编辑的功能
-"inoremap <esc> <nop>
 " 在插入模式下，将光标所在单词转化为大写
 inoremap <C-u> <esc>gUiwea
 " 括号自动补全
@@ -80,24 +74,14 @@ inoremap } <c-r>=ClosePair('}')<CR>
 " 换行之后插入#保持只能缩进
 inoremap # X#
 
-" 快速打开控制台
-nnoremap <leader>sh :VimShellTab<CR>
 " 按键绑定，将调用函数并执行
 nnoremap <leader>f :call Mydict()<CR>
 " 快速编辑vimrc文件
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 " 加载vimrc文件
 nnoremap <leader>sv :source $MYVIMRC<cr>
-" 将当前行移动到下一行
-" nnoremap - ddp
-" 将当前行移动到上一行
-" nnoremap _ dd2kp
 " 在命令模式下将小写转化为大写
 nnoremap <leader>u gUiwe
-" 将光标所在单词加上双引号
-nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
-" 将光标所在单词加上单引号
-nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
 " 将H映射为到行首
 nnoremap H <S-^>
 " 将L映射为到行尾
@@ -119,15 +103,10 @@ nnoremap <space> za
 " 快速保存
 nnoremap <leader>w :w<CR>
 
-" 重新映射帮助命令
-"cnoremap he vert bo h
-
 " 缩写映射
 iabbrev xmlv <?xml version="1.0" encoding="utf-8" ?>
 
 " 事件监听
-" 自动保存功能
-"autocmd InsertLeave *.py *.md :w
 " 自动启动文件浏览目录
 autocmd VimEnter * :NERDTreeTabsOpen
 " 为python文件自动添加文件头
@@ -135,12 +114,6 @@ autocmd BufNewFile *.py execute ":call NewPy()"
 function! NewPy()
     " call setline(1,"#!/usr/bin/env python")
     call setline(1,"# -*- encoding: utf-8 -*-")
-    " call setline(2,"\"\"\" Copyright(c) 2010,Shanghai MJ Intelligent System Co.Ltd<http://www.shmingjiang.com>,All rights reserved.")
-    " call setline(3,"Author       : Created by zhaoxinxing")
-    " let date_time = strftime("%Y-%m-%d\ %H:%M:%S")
-    " call setline(4,"Date         : ".date_time)
-    " call setline(5,"Versions     : 1.0")
-    " call setline(6,"\"\"\"")
 endfunction
 " 记录上次关闭vim光标所在的位置
 autocmd BufReadPost *
@@ -210,8 +183,6 @@ filetype off
 
 call plug#begin('~/.vim/plugged')
 
-" 插件管理
-"Plug 'VundleVim/Vundle.vim'
 " 文件管理
 Plug 'scrooloose/nerdtree'
 " 标签共享nerdtree
@@ -243,8 +214,6 @@ Plug 'tpope/vim-fugitive'
 " 状态栏插件
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-" Python 模块
-"Plug 'klen/python-mode'
 " outline插件
 Plug 'majutsushi/tagbar'
 " 单词搜索
@@ -312,6 +281,11 @@ let g:NERDTreeIndicatorMapCustom = {
     \ "Clean"     : "✔︎",
     \ "Unknown"   : "?"
     \ }
+
+" java 格式检查
+let g:syntastic_java_checkstyle_classpath='~/.vim/checkstyle-7.1.2.jar'
+let g:syntastic_java_checkstyle_conf_file='~/.vim/sun_checks.xml'
+let g:syntastic_java_javac_config_file_enabled=1
 
 " 代码概况配置
 " 需要安装ctags
