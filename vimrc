@@ -321,6 +321,7 @@ let g:SimpylFold_docstring_preview=1
 
 " 自动补全配置
 let g:ycm_autoclose_preview_window_after_completion=1
+let g:ycm_python_binary_path = 'python'
 map <leader>g :YcmCompleter GoToDefintionElseDeclaration<CR>
 set completeopt-=preview
 

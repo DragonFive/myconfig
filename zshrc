@@ -87,6 +87,7 @@ alias a="sudo dpkg-reconfigure keyboard-configuration"
 alias e=vim
 alias -s java='vim'
 alias -s xml='vim'
+alias -s html='vim'
 alias -s gz='tar -xzvf'
 alias -s tgz='tar -xzvf'
 alias -s zip='unzip'
