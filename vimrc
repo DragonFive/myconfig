@@ -249,6 +249,7 @@ call plug#end()
 filetype plugin indent on
 
 runtime macros/matchit.vim
+runtime ftplugin/man.vim
 
 "插件配置
 """""""""""""""""""""""""""""""""""""""""""""""""""
