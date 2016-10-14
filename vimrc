@@ -284,6 +284,16 @@ let g:NERDTreeIndicatorMapCustom = {
     \ "Clean"     : "✔︎",
     \ "Unknown"   : "?"
     \ }
+" 对文件进行排序
+let NERDTreeCaseSensitiveSort=1
+" 当NERDTree根目录变化时，CWD的目录也跟随变化
+let NERDTreeChDirMode=2
+" 状态栏
+let NERDTreeStatusline='%{b:NERDTree.root.path.strForOS(0)}'
+" 自动删除没用的buffer
+let NERDTreeAutoDeleteBuffer=1
+" 还没搞明白什么意思
+let NERDTreeCreatePrefix='silent keepalt keepjumps'
 
 " java 格式检查
 let g:syntastic_java_checkstyle_classpath='~/.vim/checkstyle-7.1.2.jar'
