@@ -211,6 +211,7 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'ctrlpvim/ctrlp.vim'
 " git支持
 Plug 'tpope/vim-fugitive'
+Plug 'gregsexton/gitv'
 " 状态栏插件
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
