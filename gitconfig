@@ -1,0 +1,6 @@
+[user]
+	email = xinxingzhao@yeah.net
+	name = xinxingzhao
+[core]
+	editor = vim
+	quotepath = false
