@@ -246,6 +246,8 @@ Plug 'schickling/vim-bufonly'
 Plug 'artur-shaik/vim-javacomplete2'
 " 漂亮的目录图标
 Plug 'ryanoasis/vim-devicons'
+" NERDTree根据文件类型，显示不同的颜色
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 call plug#end()
 
