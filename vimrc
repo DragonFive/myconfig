@@ -295,6 +295,8 @@ let NERDTreeStatusline='%{b:NERDTree.root.path.strForOS(0)}'
 let NERDTreeAutoDeleteBuffer=1
 " 还没搞明白什么意思
 let NERDTreeCreatePrefix='silent keepalt keepjumps'
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
 
 " java 格式检查
 let g:syntastic_java_checkstyle_classpath='~/.vim/checkstyle-7.1.2.jar'
