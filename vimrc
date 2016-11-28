@@ -244,6 +244,8 @@ Plug 'edkolev/tmuxline.vim'
 Plug 'schickling/vim-bufonly'
 " java 自动补全插件
 Plug 'artur-shaik/vim-javacomplete2'
+" 漂亮的目录图标
+Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 
@@ -470,3 +472,7 @@ imap <C-j>a <Plug>(JavaComplete-Generate-AccessorSetterGetter)
 vmap <leader>js <Plug>(JavaComplete-Generate-AccessorSetter)
 vmap <leader>jg <Plug>(JavaComplete-Generate-AccessorGetter)
 vmap <leader>ja <Plug>(JavaComplete-Generate-AccessorSetterGetter)
+
+" 目录图标配置
+let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+let g:DevIconsEnableFoldersOpenClose = 1
