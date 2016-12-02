@@ -63,7 +63,6 @@ plugins=(git \
          copydir \
          debian \
          history \
-         tmux \
          web-search \
          zsh-navigation-tools \
          zsh_reload)
