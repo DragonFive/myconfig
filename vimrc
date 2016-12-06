@@ -127,18 +127,24 @@ nnoremap <F2> oimport ipdb; ipdb.set_trace()<ESC>:w<CR>
 syntax enable
 let g:solarized_termtrans = 1
 " 设置背景色
-set background=dark
+" set background=dark
+set background=light
 colorscheme solarized
 " airline 状态栏配置
 " 显示buffer标签
 let &t_Co=256
 let g:airline#extensions#tabline#enabled=1
-let g:airline_theme='solarized'
+" let g:airline_theme='solarized'
+let g:airline_theme='papercolor'
 let g:airline_powerline_fonts=1
 
 " 高亮行列的配色方
-highlight CursorLine   cterm=NONE ctermbg=black ctermfg=white guibg=red guifg=white
-highlight CursorColumn cterm=NONE ctermbg=black ctermfg=white guibg=red guifg=white
+" 深色
+" highlight CursorLine   cterm=NONE ctermbg=black ctermfg=white guibg=red guifg=white
+" highlight CursorColumn cterm=NONE ctermbg=black ctermfg=white guibg=red guifg=white
+" 浅色
+highlight CursorLine   cterm=NONE ctermbg=lightgray ctermfg=black guibg=red guifg=white
+highlight CursorColumn cterm=NONE ctermbg=lightgray ctermfg=black guibg=red guifg=white
 " 修改高亮的背景色
 highlight SyntasticErrorSign guifg=white guibg=black
 
