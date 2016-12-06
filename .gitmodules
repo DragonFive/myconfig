@@ -1,0 +1,3 @@
+[submodule "third_party/dircolors-solarized"]
+	path = third_party/dircolors-solarized
+	url = git@github.com:seebi/dircolors-solarized.git
