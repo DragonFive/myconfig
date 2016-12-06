@@ -123,4 +123,4 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 eval `dircolors ~/.dircolors`
 
 setopt HIST_IGNORE_DUPS
-source ~/github/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/myconfig/third_party/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
