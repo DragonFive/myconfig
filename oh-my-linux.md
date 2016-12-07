@@ -1,7 +1,6 @@
 ## 安装Ubuntu之后...
 
 ### 准备工作
-
 1、设置root密码
 
 ```
@@ -98,3 +97,26 @@ sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /et
 ```
 sudo apt-get install google-chrome-stable
 ```
+
+安装代理插件
+
+[Proxy SwitchOmega](https://github.com/FelisCatus/SwitchyOmega)
+
+配置Proxy Servers，Protocol: SOCK5，Server:127.0.0.1，Port:1080
+
+配置Rule List Config， Rule List Format: AutoProxy，Rule List URL: https://autoproxy-gfwlist.googlecode.com/svn/trunk/gfwlist.txt
+
+3、软件中心的应用
+
+截图软件：Shutter
+
+视屏播放软件: VLC media player
+
+4、命令行安装
+
+git
+```
+sudo apt-get install git
+```
+
+

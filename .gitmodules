@@ -10,3 +10,6 @@
 [submodule "third_party/bullet-train-oh-my-zsh-theme"]
 	path = third_party/bullet-train-oh-my-zsh-theme
 	url = git@github.com:caiogondim/bullet-train-oh-my-zsh-theme.git
+[submodule "third_party/SwitchyOmega"]
+	path = third_party/SwitchyOmega
+	url = git@github.com:FelisCatus/SwitchyOmega.git
