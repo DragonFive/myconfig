@@ -124,3 +124,5 @@ eval `dircolors ~/.dircolors`
 
 setopt HIST_IGNORE_DUPS
 source ~/myconfig/third_party/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+znt_list_colorpair="green/white"
