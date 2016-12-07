@@ -119,4 +119,16 @@ git
 sudo apt-get install git
 ```
 
+SysMonitor Indicator，系统监控
+```
+sudo add-apt-repository ppa:fossfreedom/indicator-sysmonitor
+sudo apt-get update
+sudo apt-get install indicator-sysmonitor
+```
 
+Terminator 终端工具
+```
+sudo add-apt-repository ppa:gnome-terminator
+sudo apt-get update
+sudo apt-get install terminator
+```
