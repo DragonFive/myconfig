@@ -132,3 +132,17 @@ sudo add-apt-repository ppa:gnome-terminator
 sudo apt-get update
 sudo apt-get install terminator
 ```
+
+## 安装zsh，oh-my-zsh, vim
+
+1、安装zsh
+
+```
+sudo apt-get install zsh
+```
+
+设置zsh为默认shell
+
+```
+chsh -s /usr/bin/zsh
+```
