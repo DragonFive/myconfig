@@ -30,7 +30,7 @@ export UPDATE_ZSH_DAYS=3
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="false"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
@@ -68,7 +68,8 @@ plugins=(git \
          history \
          web-search \
          zsh-navigation-tools \
-         zsh_reload)
+         zsh_reload \
+         colored-man-pages)
 
 # User configuration
 
