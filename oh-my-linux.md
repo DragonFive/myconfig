@@ -146,3 +146,16 @@ sudo apt-get install zsh
 ```
 chsh -s /usr/bin/zsh
 ```
+
+2、安装vim
+
+```
+sudo apt-get install vim
+```
+
+3、获取配置
+
+```
+git clone git@github.com:xinxingzhao/myconfig.git
+```
+
