@@ -21,6 +21,12 @@ if [ -f "$dircolors_file" ]; then
     echo 'remove '$dircolors_file
 fi
 
+sudo apt-get install zsh
+
+chsh -s /usr/bin/zsh
+
+sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+
 ln -s ~/myconfig/zshrc ~/.zshrc
 ln -s ~/myconfig/vimrc ~/.vimrc
 ln -s ~/myconfig/tmux.conf ~/.tmux.conf
