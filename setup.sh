@@ -4,6 +4,7 @@ zshrc_file=~/.zshrc
 vimrc_file=~/.vimrc
 tmux_file=~/.tmux.conf
 dircolors_file=~/.dircolors
+indicator_file=~/.indicator-sysmonitor.json
 if [ -f "$zshrc_file" ]; then
     rm -f $zshrc_file
     echo 'remove '$zshrc_file
@@ -20,6 +21,10 @@ if [ -f "$dircolors_file" ]; then
     rm -f $dircolors_file
     echo 'remove '$dircolors_file
 fi
+if [ -f "$inficator_file" ]; then
+    rm -f "$inficator_file"
+    echo 'remove '$inficator_file
+fi
 
 sudo apt-get install zsh
 
@@ -31,3 +36,4 @@ ln -s ~/myconfig/zshrc ~/.zshrc
 ln -s ~/myconfig/vimrc ~/.vimrc
 ln -s ~/myconfig/tmux.conf ~/.tmux.conf
 ln -s ~/myconfig/third_party/dircolors-solarized/dircolors.ansi-light ~/.dircolors
+ln -s ~/myconfig/indicator-sysmonitor.json ~/.indicator-sysmonitor.json
