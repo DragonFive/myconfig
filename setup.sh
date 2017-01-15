@@ -37,3 +37,4 @@ ln -s ~/myconfig/vimrc ~/.vimrc
 ln -s ~/myconfig/tmux.conf ~/.tmux.conf
 ln -s ~/myconfig/third_party/dircolors-solarized/dircolors.ansi-light ~/.dircolors
 ln -s ~/myconfig/indicator-sysmonitor.json ~/.indicator-sysmonitor.json
+ln -s ~/myconfig/third_party/bullet-train-oh-my-zsh-theme/bullet-train.zsh-theme ~/.oh-my-zsh/themes/bullet-train.zsh-theme
