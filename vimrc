@@ -197,7 +197,7 @@ Plug 'jistr/vim-nerdtree-tabs'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 " 语法检查
 Plug 'tpope/vim-pathogen'
-Plug 'vim-syntastic/syntastic'
+" Plug 'vim-syntastic/syntastic'
 " 滚屏插件，使滚屏看起来好看一下
 Plug 'yonchu/accelerated-smooth-scroll'
 " 标签编写插件
@@ -254,6 +254,8 @@ Plug 'artur-shaik/vim-javacomplete2'
 Plug 'ryanoasis/vim-devicons'
 " NERDTree根据文件类型，显示不同的颜色
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+" Vim Wiki 个人知识管理
+Plug 'vimwiki/vimwiki'
 
 call plug#end()
 
