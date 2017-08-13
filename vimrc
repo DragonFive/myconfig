@@ -197,7 +197,7 @@ Plug 'jistr/vim-nerdtree-tabs'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 " 语法检查
 Plug 'tpope/vim-pathogen'
-Plug 'scrooloose/syntastic'
+Plug 'vim-syntastic/syntastic'
 " 滚屏插件，使滚屏看起来好看一下
 Plug 'yonchu/accelerated-smooth-scroll'
 " 标签编写插件
@@ -274,7 +274,7 @@ let NERDTreeAutoCenter=1
 " 是否显示隐藏文件
 let NERDTreeShowHidden=1
 " 设置宽度
-let NERDTreeWinSize=31
+let NERDTreeWinSize=50
 " 在终端启动vim时，共享NERDTree
 let g:nerdtree_tabs_open_on_console_startup=1
 "let g:nerdtree_tabs_focus_on_files=1
