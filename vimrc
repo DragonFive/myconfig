@@ -58,6 +58,11 @@ set term=screen
 set showcmd
 " 设置自动保存
 set autowrite
+" 设置81行高亮
+set colorcolumn=81
+" 设置单行超过80个字符自动换行
+" set textwidth=80
+" set fo+=mB
 
 """"""""""""""""""""" 映射方案 """"""""""""""""""""
 " 使用jk退出插入模式
@@ -101,7 +106,7 @@ nnoremap <silent> ]B :blast<CR>
 " 代码折叠快捷键
 nnoremap <space> za
 " 快速保存
-nnoremap <leader>w :w<CR>
+" nnoremap <leader>w :w<CR>
 
 " 缩写映射
 iabbrev xmlv <?xml version="1.0" encoding="utf-8" ?>
@@ -245,7 +250,7 @@ Plug 'airblade/vim-gitgutter'
 " 整行移动
 Plug 'matze/vim-move'
 " Tmux 使用airline配置
-Plug 'edkolev/tmuxline.vim'
+" Plug 'edkolev/tmuxline.vim'
 " buffer 关闭管理
 Plug 'schickling/vim-bufonly'
 " java 自动补全插件
@@ -389,14 +394,14 @@ let g:ctrlp_custom_ignore = {
 	\ 'file': '\v\.(swp|pyc)$',
 	\ }
 
-let g:tmuxline_preset = {
-      \'a'    : '#S',
-      \'c'    : ['#(whoami)', '#(uptime | cud -d " " -f 1,2,3)'],
-      \'win'  : ['#I', '#W'],
-      \'cwin' : ['#I', '#W', '#F'],
-      \'x'    : '#(date)',
-      \'y'    : ['%R', '%a', '%Y-%m-%d'],
-      \'z'    : '#H'}
+" let g:tmuxline_preset = {
+"       \'a'    : '#S',
+"       \'c'    : ['#(whoami)', '#(uptime | cud -d " " -f 1,2,3)'],
+"       \'win'  : ['#I', '#W'],
+"       \'cwin' : ['#I', '#W', '#F'],
+"       \'x'    : '#(date)',
+"       \'y'    : ['%R', '%a', '%Y-%m-%d'],
+"       \'z'    : '#H'}
 
 " VimShell 配置
 let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
