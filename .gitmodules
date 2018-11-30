@@ -13,3 +13,9 @@
 [submodule "third_party/SwitchyOmega"]
 	path = third_party/SwitchyOmega
 	url = git@github.com:FelisCatus/SwitchyOmega.git
+[submodule "third_party/zsh-autosuggestions"]
+	path = third_party/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions.git
+[submodule "third_party/autojump"]
+	path = third_party/autojump
+	url = https://github.com/wting/autojump.git
