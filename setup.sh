@@ -35,17 +35,18 @@ echo "exec /bin/zsh -l" >> ~/.bashrc
 #sudo apt-get install tmux
 
 # install oh-my-zsh
-sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+#sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
 # install autojump
 cd third_party/autojump
 ./install.py 
 
 # config vim
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+#git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 # copy config
 ln -s ~/myconfig/zshrc ~/.zshrc
+ln -s ~/myconfig/.prompt_default.sh ~/.prompt_default.sh
 ln -s ~/myconfig/vimrc ~/.vimrc
 ln -s ~/myconfig/tmux.conf ~/.tmux.conf
 ln -s ~/myconfig/third_party/dircolors-solarized/dircolors.ansi-light ~/.dircolors
