@@ -59,3 +59,10 @@ ln -s ~/myconfig/third_party/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/cust
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 
+# set tmux
+cd ~
+mkdir .tmux && cd .tmux && mkdir plugins && cd plugins
+git clone https://github.com/tmux-plugins/tmux-resurrect.git
+git clone https://github.com/tmux-plugins/tmux-continuum.git
+
+

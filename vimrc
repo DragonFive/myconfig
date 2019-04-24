@@ -52,8 +52,8 @@ set nocompatible
 set wildmenu
  
 " 设置显示行号和相对行号, 向上移动到某行，行数-
-set number
-set relativenumber
+" set number
+" set relativenumber
 " 设置智能缩进
 set smartindent
 " 下一行自动复制本行的缩进
