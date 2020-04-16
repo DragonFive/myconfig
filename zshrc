@@ -110,6 +110,7 @@ export MANPATH="/usr/local/man:$MANPATH"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias h="history"
+alias ls="ls -lA --color=auto"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [[ -s $HOME/.autojump/etc/profile.d/autojump.sh ]]

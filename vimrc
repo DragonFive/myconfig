@@ -52,8 +52,8 @@ set nocompatible
 set wildmenu
  
 " 设置显示行号和相对行号, 向上移动到某行，行数-
-" set number
-" set relativenumber
+set number
+set relativenumber
 " 设置智能缩进
 set smartindent
 " 下一行自动复制本行的缩进
@@ -125,12 +125,21 @@ set autowrite
  
 " 换行之后插入#保持只能缩进
 inoremap # X#
+
 " 为python文件自动添加文件头
-autocmd BufNewFile *.py execute ":call NewPy("
-function! NewPy() 
-    " call setline(1,"#!/usr/bin/env python"   
-    call setline(1,"# -*- encoding: utf-8 -*-")
-endfunction
+func SetTitle()
+call setline(1, "\#!/usr/bin/python")
+call setline(2, "\# -*- coding=utf8 -*-")
+call setline(3, "\"\"\"")
+call setline(4, "\# @Author : Ma XiaoLong")
+call setline(5, "\# @Created Time : ".strftime("%Y-%m-%d %H:%M:%S"))
+call setline(6, "\# @Description : ")
+call setline(7, "\"\"\"")
+normal G
+normal o
+normal o
+endfunc
+autocmd bufnewfile *.py call SetTitle()
  
 " 记录上次关闭vim光标所在的位置
 autocmd BufReadPost *

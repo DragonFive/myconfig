@@ -38,26 +38,26 @@ echo "exec /bin/zsh -l" >> ~/.bashrc
 #sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
 # install autojump
-cd third_party/autojump
-./install.py 
+#cd third_party/autojump
+#./install.py 
 
 # config vim
 #git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 # copy config
-ln -s ~/myconfig/zshrc ~/.zshrc
-ln -s ~/myconfig/.prompt_default.sh ~/.prompt_default.sh
-ln -s ~/myconfig/vimrc ~/.vimrc
-ln -s ~/myconfig/tmux.conf ~/.tmux.conf
-ln -s ~/myconfig/third_party/dircolors-solarized/dircolors.ansi-light ~/.dircolors
-ln -s ~/myconfig/indicator-sysmonitor.json ~/.indicator-sysmonitor.json
-ln -s ~/myconfig/third_party/bullet-train-oh-my-zsh-theme/bullet-train.zsh-theme ~/.oh-my-zsh/themes/bullet-train.zsh-theme
-ln -s ~/myconfig/third_party/zsh-syntax-highlighting ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-ln -s ~/myconfig/third_party/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+cp ~/myconfig/zshrc ~/.zshrc
+cp ~/myconfig/.prompt_default.sh ~/.prompt_default.sh
+cp ~/myconfig/vimrc ~/.vimrc
+cp ~/myconfig/tmux.conf ~/.tmux.conf
+cp ~/myconfig/third_party/dircolors-solarized/dircolors.ansi-light ~/.dircolors
+cp ~/myconfig/indicator-sysmonitor.json ~/.indicator-sysmonitor.json
+cp ~/myconfig/third_party/bullet-train-oh-my-zsh-theme/bullet-train.zsh-theme ~/.oh-my-zsh/themes/bullet-train.zsh-theme
+cp -r ~/myconfig/third_party/zsh-syntax-highlighting ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+cp -r ~/myconfig/third_party/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 # install fzf 
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install
+#git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+#~/.fzf/install
 
 # set tmux
 cd ~
@@ -65,4 +65,15 @@ mkdir .tmux && cd .tmux && mkdir plugins && cd plugins
 git clone https://github.com/tmux-plugins/tmux-resurrect.git
 git clone https://github.com/tmux-plugins/tmux-continuum.git
 
+cd ~/.vim/bundle/
+git clone https://github.com/tomtom/tlib_vim.git
+git clone https://github.com/MarcWeber/vim-addon-mw-utils.git
+git clone https://github.com/garbas/vim-snipmate.git
+git clone https://github.com/honza/vim-snippets.git
+git clone https://github.com/jayli/vim-easycomplete.git
+git clone https://github.com/jayli/vim-dictionary.git
+git clone https://github.com/davidhalter/jedi-vim.git
+
+
+pip install -U jedi
 
